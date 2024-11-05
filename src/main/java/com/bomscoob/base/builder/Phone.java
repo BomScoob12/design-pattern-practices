@@ -56,7 +56,7 @@ public class Phone {
                 '}';
     }
 
-    static class Builder implements IPhoneBuilder {
+    public static class Builder implements IPhoneBuilder {
         private CpuList cpuType;
         private int ram;
         private int rom;
