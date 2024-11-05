@@ -30,6 +30,10 @@ public class Phone {
         return camera;
     }
 
+    public void setCpuType(CpuList cpuType) {
+        this.cpuType = cpuType;
+    }
+
     public void setRam(int ram) {
         this.ram = ram;
     }
@@ -51,41 +55,41 @@ public class Phone {
                 ", camera=" + camera +
                 '}';
     }
-}
 
-class Builder implements IPhoneBuilder {
-    private CpuList cpuType;
-    private int ram;
-    private int rom;
-    private boolean camera;
+    static class Builder implements IPhoneBuilder {
+        private CpuList cpuType;
+        private int ram;
+        private int rom;
+        private boolean camera;
 
 
-    @Override
-    public Builder addCpu(CpuList cpu) {
-        this.cpuType = cpu;
-        return this;
-    }
+        @Override
+        public Builder addCpu(CpuList cpu) {
+            this.cpuType = cpu;
+            return this;
+        }
 
-    @Override
-    public Builder addRam(int ram) {
-        this.ram = ram;
-        return this;
-    }
+        @Override
+        public Builder addRam(int ram) {
+            this.ram = ram;
+            return this;
+        }
 
-    @Override
-    public Builder addRom(int rom) {
-        this.rom = rom;
-        return this;
-    }
+        @Override
+        public Builder addRom(int rom) {
+            this.rom = rom;
+            return this;
+        }
 
-    @Override
-    public Builder addCamera(boolean cam) {
-        this.camera = cam;
-        return this;
-    }
+        @Override
+        public Builder addCamera(boolean cam) {
+            this.camera = cam;
+            return this;
+        }
 
-    @Override
-    public Phone build() {
-        return new Phone(cpuType, ram, rom, camera);
+        @Override
+        public Phone build() {
+            return new Phone(cpuType, ram, rom, camera);
+        }
     }
 }
