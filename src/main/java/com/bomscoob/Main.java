@@ -2,6 +2,7 @@ package com.bomscoob;
 
 import com.bomscoob.base.builder.CpuList;
 import com.bomscoob.base.builder.Phone;
+import com.bomscoob.base.factorymethod.factory.IFactoryRestaurant;
 import com.bomscoob.base.factorymethod.factory.JapaneseRestaurantFactory;
 import com.bomscoob.base.factorymethod.restaurant.Restaurant;
 import com.bomscoob.base.factorymethod.restaurant.RestaurantCuisines;
@@ -31,8 +32,8 @@ public class Main {
     }
 
     private static void testFactoryMethod() {
-//        Restaurant bomScopeRestaurant = JapaneseRestaurantFactory("YamYam", RestaurantSize.LARGE);
-
-//        logger.info(bomScopeRestaurant.toString());
+        IFactoryRestaurant factoryRestaurant = new JapaneseRestaurantFactory();
+        Restaurant bomJapRestaurant = factoryRestaurant.createRestaurant("BOM", RestaurantSize.MEDIUM);
+        logger.info(bomJapRestaurant.toString());
     }
 }
