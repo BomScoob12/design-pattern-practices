@@ -3,7 +3,11 @@ package com.bomscoob;
 import com.bomscoob.base.builder.CpuList;
 import com.bomscoob.base.builder.Phone;
 
+import java.util.logging.Logger;
+
 public class Main {
+
+    private static final Logger logger = Logger.getAnonymousLogger();
     public static void main(String[] args) {
         testBuilderPattern();
     }
@@ -17,7 +21,7 @@ public class Main {
                 .addCamera(true)
                 .build();
 
-        System.out.println(onlyCam);
-        System.out.println(samsung);
+        logger.info(onlyCam.toString());
+        logger.info(samsung.toString());
     }
 }
