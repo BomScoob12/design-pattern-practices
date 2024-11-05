@@ -7,4 +7,5 @@ import com.bomscoob.base.factorymethod.restaurant.RestaurantSize;
 // Creator interface
 public interface IFactoryRestaurant {
     Restaurant getRestaurant(String name, RestaurantCuisines cuisines, RestaurantSize size);
+    Restaurant getDefaultRestaurant();
 }
