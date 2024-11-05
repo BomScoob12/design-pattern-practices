@@ -1,11 +1,10 @@
 package com.bomscoob.base.factorymethod.factory;
 
-import com.bomscoob.base.factorymethod.restaurant.Restaurant;
-import com.bomscoob.base.factorymethod.restaurant.RestaurantCuisines;
-import com.bomscoob.base.factorymethod.restaurant.RestaurantSize;
+import com.bomscoob.base.factorymethod.restaurant.*;
 
-// Creator interface
+// Creator interface/abstract
 public interface IFactoryRestaurant {
-    Restaurant getRestaurant(String name, RestaurantCuisines cuisines, RestaurantSize size);
-    Restaurant getDefaultRestaurant();
+    Restaurant createRestaurant(String name, RestaurantSize size) {
+        return DefaultRestaurantFactory.createRestaurant(name, size);
+    }
 }

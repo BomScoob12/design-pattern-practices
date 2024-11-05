@@ -1,5 +1,6 @@
 package com.bomscoob.base.factorymethod.restaurant;
 
+// Product
 public abstract class Restaurant {
     private String name;
     private String signatureMenu;
@@ -32,5 +33,14 @@ public abstract class Restaurant {
 
     public void setSize(RestaurantSize size) {
         this.size = size;
+    }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "name='" + name + '\'' +
+                ", signatureMenu='" + signatureMenu + '\'' +
+                ", size=" + size +
+                '}';
     }
 }

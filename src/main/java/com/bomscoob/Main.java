@@ -2,6 +2,10 @@ package com.bomscoob;
 
 import com.bomscoob.base.builder.CpuList;
 import com.bomscoob.base.builder.Phone;
+import com.bomscoob.base.factorymethod.factory.JapaneseRestaurantFactory;
+import com.bomscoob.base.factorymethod.restaurant.Restaurant;
+import com.bomscoob.base.factorymethod.restaurant.RestaurantCuisines;
+import com.bomscoob.base.factorymethod.restaurant.RestaurantSize;
 
 import java.util.logging.Logger;
 
@@ -9,7 +13,8 @@ public class Main {
 
     private static final Logger logger = Logger.getAnonymousLogger();
     public static void main(String[] args) {
-        testBuilderPattern();
+//        testBuilderPattern();
+        testFactoryMethod();
     }
 
     private static void testBuilderPattern() {
@@ -23,5 +28,11 @@ public class Main {
 
         logger.info(onlyCam.toString());
         logger.info(samsung.toString());
+    }
+
+    private static void testFactoryMethod() {
+//        Restaurant bomScopeRestaurant = JapaneseRestaurantFactory("YamYam", RestaurantSize.LARGE);
+
+//        logger.info(bomScopeRestaurant.toString());
     }
 }
