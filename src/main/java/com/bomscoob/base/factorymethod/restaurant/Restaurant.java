@@ -2,12 +2,10 @@ package com.bomscoob.base.factorymethod.restaurant;
 
 public abstract class Restaurant {
     private String name;
-    private String address;
     private String signatureMenu;
     private RestaurantSize size;
-    public Restaurant(String name, String address, String signatureMenu, RestaurantSize size) {
+    public Restaurant(String name, String signatureMenu, RestaurantSize size) {
         this.name = name;
-        this.address = address;
         this.signatureMenu = signatureMenu;
         this.size = size;
     }
@@ -18,14 +16,6 @@ public abstract class Restaurant {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getSignatureMenu() {
