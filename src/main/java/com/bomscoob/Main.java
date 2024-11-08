@@ -11,6 +11,7 @@ import com.bomscoob.base.factorymethod.factory.creator.RestaurantFactory;
 import com.bomscoob.base.factorymethod.factory.concrete.JapaneseRestaurantFactory;
 import com.bomscoob.base.factorymethod.restaurant.product.Restaurant;
 import com.bomscoob.base.factorymethod.restaurant.product.RestaurantSize;
+import com.bomscoob.base.prototype.Bee;
 import com.bomscoob.base.prototype.Monster;
 
 import java.util.logging.Logger;
@@ -65,10 +66,10 @@ public class Main {
     }
 
     private static void testPrototype() {
-        Monster zom = new Monster("ZOMBOI");
-        Monster zom2 = zom.cloneMonster();
+        Monster bee1 = new Bee("B1");
+        Monster bee2 = bee1.cloneMonster();
 
-        logger.info(zom.toString());
-        logger.info(zom2.toString());
+        logger.info(bee1.toString());
+        logger.info(bee2.toString());
     }
 }
