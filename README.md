@@ -1,7 +1,7 @@
 ### Creational Patterns
-- Singleton
-- Builder
-- Factory Method
+- Singleton 
+- [x] Builder
+- [x] Factory Method
 - Abstract Factory
 - Prototype
 
