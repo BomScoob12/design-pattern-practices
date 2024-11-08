@@ -1,6 +1,8 @@
 package com.bomscoob.base.creational.singleton;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 // singleton - handle only db connection
 public class DatabaseConnection {
