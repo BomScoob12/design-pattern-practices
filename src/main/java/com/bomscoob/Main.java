@@ -1,19 +1,19 @@
 package com.bomscoob;
 
-import com.bomscoob.base.abstractfactory.factory.GUIFactory;
-import com.bomscoob.base.abstractfactory.factory.MacGUIFactory;
-import com.bomscoob.base.abstractfactory.factory.WinGUIFactory;
-import com.bomscoob.base.abstractfactory.product.type.Button;
-import com.bomscoob.base.abstractfactory.product.type.Checkbox;
-import com.bomscoob.base.builder.CpuList;
-import com.bomscoob.base.builder.Phone;
-import com.bomscoob.base.factorymethod.factory.creator.RestaurantFactory;
-import com.bomscoob.base.factorymethod.factory.concrete.JapaneseRestaurantFactory;
-import com.bomscoob.base.factorymethod.restaurant.product.Restaurant;
-import com.bomscoob.base.factorymethod.restaurant.product.RestaurantSize;
-import com.bomscoob.base.prototype.Bee;
-import com.bomscoob.base.prototype.Monster;
-import com.bomscoob.base.singleton.DatabaseConnection;
+import com.bomscoob.base.creational.abstractfactory.factory.GUIFactory;
+import com.bomscoob.base.creational.abstractfactory.factory.MacGUIFactory;
+import com.bomscoob.base.creational.abstractfactory.factory.WinGUIFactory;
+import com.bomscoob.base.creational.abstractfactory.product.type.Button;
+import com.bomscoob.base.creational.abstractfactory.product.type.Checkbox;
+import com.bomscoob.base.creational.builder.CpuList;
+import com.bomscoob.base.creational.builder.Phone;
+import com.bomscoob.base.creational.factorymethod.factory.creator.RestaurantFactory;
+import com.bomscoob.base.creational.factorymethod.factory.concrete.JapaneseRestaurantFactory;
+import com.bomscoob.base.creational.factorymethod.restaurant.product.Restaurant;
+import com.bomscoob.base.creational.factorymethod.restaurant.product.RestaurantSize;
+import com.bomscoob.base.creational.prototype.Bee;
+import com.bomscoob.base.creational.prototype.Monster;
+import com.bomscoob.base.creational.singleton.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
