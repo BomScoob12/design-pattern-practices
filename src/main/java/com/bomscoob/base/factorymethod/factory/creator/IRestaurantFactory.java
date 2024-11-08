@@ -4,6 +4,6 @@ import com.bomscoob.base.factorymethod.restaurant.product.Restaurant;
 import com.bomscoob.base.factorymethod.restaurant.product.RestaurantSize;
 
 // Creator interface/abstract
-public interface IFactoryRestaurant {
+public interface IRestaurantFactory {
     Restaurant createRestaurant(String name, RestaurantSize size);
 }
