@@ -11,6 +11,7 @@ import com.bomscoob.base.factorymethod.factory.creator.RestaurantFactory;
 import com.bomscoob.base.factorymethod.factory.concrete.JapaneseRestaurantFactory;
 import com.bomscoob.base.factorymethod.restaurant.product.Restaurant;
 import com.bomscoob.base.factorymethod.restaurant.product.RestaurantSize;
+import com.bomscoob.base.prototype.Monster;
 
 import java.util.logging.Logger;
 
@@ -20,7 +21,8 @@ public class Main {
     public static void main(String[] args) {
 //        testBuilderPattern();
 //        testFactoryMethod();
-        testAbstractFactory();
+//        testAbstractFactory();
+        testPrototype();
     }
 
     private static void testBuilderPattern() {
@@ -60,5 +62,13 @@ public class Main {
         } else {
             logger.warning("Unknown OS");
         }
+    }
+
+    private static void testPrototype() {
+        Monster zom = new Monster("ZOMBOI");
+        Monster zom2 = zom.cloneMonster();
+
+        logger.info(zom.toString());
+        logger.info(zom2.toString());
     }
 }

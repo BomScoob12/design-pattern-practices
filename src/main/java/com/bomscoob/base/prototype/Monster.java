@@ -24,4 +24,11 @@ public class Monster implements Prototype {
     public Monster cloneMonster() {
         return new Monster(this.name);
     }
+
+    @Override
+    public String toString() {
+        return "Monster{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
