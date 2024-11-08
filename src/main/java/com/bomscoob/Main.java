@@ -1,5 +1,10 @@
 package com.bomscoob;
 
+import com.bomscoob.base.abstractfactory.factory.GUIFactory;
+import com.bomscoob.base.abstractfactory.factory.MacGUIFactory;
+import com.bomscoob.base.abstractfactory.factory.WinGUIFactory;
+import com.bomscoob.base.abstractfactory.product.type.Button;
+import com.bomscoob.base.abstractfactory.product.type.Checkbox;
 import com.bomscoob.base.builder.CpuList;
 import com.bomscoob.base.builder.Phone;
 import com.bomscoob.base.factorymethod.factory.creator.RestaurantFactory;
@@ -13,8 +18,9 @@ public class Main {
 
     private static final Logger logger = Logger.getAnonymousLogger();
     public static void main(String[] args) {
-        testBuilderPattern();
-        testFactoryMethod();
+//        testBuilderPattern();
+//        testFactoryMethod();
+        testAbstractFactory();
     }
 
     private static void testBuilderPattern() {
@@ -36,5 +42,23 @@ public class Main {
         Restaurant tewJapRestaurant = restaurantFactory.createRestaurant("TEW_JOJA", RestaurantSize.MEDIUM);
         logger.info(bomJapRestaurant.toString());
         logger.info(tewJapRestaurant.toString());
+    }
+
+    private static void testAbstractFactory() {
+        if (System.getenv("OS").contains("Win")) {
+            GUIFactory winFactory = new WinGUIFactory();
+            Button wBtn = winFactory.createButton();
+            Checkbox wCkb = winFactory.createCheckbox();
+            logger.info("WINDOWS COMPONENT");
+            logger.info(wBtn.toString() + wCkb.toString());
+        } else if (System.getenv("OS").contains("Mac")){
+            GUIFactory macFactory = new MacGUIFactory();
+            Button mBtn = macFactory.createButton();
+            Checkbox mCkb = macFactory.createCheckbox();
+            logger.info("MAC COMPONENT");
+            logger.info(mBtn.toString() + mCkb.toString());
+        } else {
+            logger.warning("Unknown OS");
+        }
     }
 }

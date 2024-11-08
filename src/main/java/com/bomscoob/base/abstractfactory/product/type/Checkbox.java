@@ -9,4 +9,11 @@ public abstract class Checkbox {
     public String getSupportOS() {
         return this.supportOS;
     }
+
+    @Override
+    public String toString() {
+        return "Checkbox{" +
+                "supportOS='" + supportOS + '\'' +
+                '}';
+    }
 }

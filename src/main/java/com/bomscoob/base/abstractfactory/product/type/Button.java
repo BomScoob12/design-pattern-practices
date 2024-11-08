@@ -9,4 +9,11 @@ public abstract class Button {
     public String getSupportOS() {
         return this.supportOS;
     }
+
+    @Override
+    public String toString() {
+        return "Button{" +
+                "supportOS='" + supportOS + '\'' +
+                '}';
+    }
 }
