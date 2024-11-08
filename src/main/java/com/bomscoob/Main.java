@@ -13,7 +13,12 @@ import com.bomscoob.base.factorymethod.restaurant.product.Restaurant;
 import com.bomscoob.base.factorymethod.restaurant.product.RestaurantSize;
 import com.bomscoob.base.prototype.Bee;
 import com.bomscoob.base.prototype.Monster;
+import com.bomscoob.base.singleton.DatabaseConnection;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Logger;
 
 public class Main {
@@ -23,7 +28,8 @@ public class Main {
 //        testBuilderPattern();
 //        testFactoryMethod();
 //        testAbstractFactory();
-        testPrototype();
+//        testPrototype();
+        testSingleton();
     }
 
     private static void testBuilderPattern() {
@@ -71,5 +77,23 @@ public class Main {
 
         logger.info(bee1.toString());
         logger.info(bee2.toString());
+    }
+
+    private static void testSingleton() {
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            Statement statement = conn.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM sample_db.customers");
+            int columnCount = resultSet.getMetaData().getColumnCount();
+            while (resultSet.next()) {
+                for (int i = 1 ; i <= columnCount; i++) {
+                    System.out.print(resultSet.getString(i) + "\t");
+                }
+
+                System.out.println();
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
