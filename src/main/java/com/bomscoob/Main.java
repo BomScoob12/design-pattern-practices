@@ -13,7 +13,7 @@ public class Main {
 
     private static final Logger logger = Logger.getAnonymousLogger();
     public static void main(String[] args) {
-//        testBuilderPattern();
+        testBuilderPattern();
         testFactoryMethod();
     }
 

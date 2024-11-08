@@ -5,7 +5,8 @@ public abstract class Restaurant {
     private String name;
     private String signatureMenu;
     private RestaurantSize size;
-    public Restaurant(String name, String signatureMenu, RestaurantSize size) {
+    private RestaurantCuisines cuisines;
+    public Restaurant(String name, String signatureMenu, RestaurantSize size, RestaurantCuisines cuisines) {
         this.name = name;
         this.signatureMenu = signatureMenu;
         this.size = size;
@@ -33,6 +34,14 @@ public abstract class Restaurant {
 
     public void setSize(RestaurantSize size) {
         this.size = size;
+    }
+
+    public RestaurantCuisines getCuisines() {
+        return cuisines;
+    }
+
+    public void setCuisines(RestaurantCuisines cuisines) {
+        this.cuisines = cuisines;
     }
 
     @Override
