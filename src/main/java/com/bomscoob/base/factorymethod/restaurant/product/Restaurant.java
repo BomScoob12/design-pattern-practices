@@ -1,4 +1,4 @@
-package com.bomscoob.base.factorymethod.restaurant;
+package com.bomscoob.base.factorymethod.restaurant.product;
 
 // Product
 public abstract class Restaurant {

@@ -1,4 +1,4 @@
-package com.bomscoob.base.factorymethod.restaurant;
+package com.bomscoob.base.factorymethod.restaurant.product;
 
 public enum RestaurantSize {
     SMALL,
