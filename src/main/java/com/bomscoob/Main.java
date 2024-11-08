@@ -86,6 +86,7 @@ public class Main {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM sample_db.customers");
             int columnCount = resultSet.getMetaData().getColumnCount();
             while (resultSet.next()) {
+                // the number of column start from 1
                 for (int i = 1 ; i <= columnCount; i++) {
                     System.out.print(resultSet.getString(i) + "\t");
                 }
